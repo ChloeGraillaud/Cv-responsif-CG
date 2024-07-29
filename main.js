@@ -207,6 +207,39 @@
       });
     });
       
-      
-      
-      
+    //Dark mode
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        const darkModeIcon = "images/moon.png";
+        const lightModeIcon = "images/sun.png";
+        const darkMode = "dark-mode";
+    
+        function updateButtonIcon() {
+            const img = toggleButton.querySelector('img');
+            if (body.classList.contains(darkMode)) {
+                img.src = lightModeIcon;
+                img.alt = "Mode clair";
+            } else {
+                img.src = darkModeIcon;
+                img.alt = "Mode sombre";
+            }
+        }
+    
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle(darkMode);
+            if (body.classList.contains(darkMode)) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+            updateButtonIcon();
+        });
+    
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add(darkMode);
+        }
+        updateButtonIcon();
+    });

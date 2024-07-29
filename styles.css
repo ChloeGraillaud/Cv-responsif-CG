@@ -1,5 +1,7 @@
 body, .offcanvas-header, .offcanvas-body, .offcanvaslist {
     background-color: #f1f1da;
+    background-color: var(--background-color-body);
+    
 }
 h1, h2, h3, h5, p, li, .form-label {
     font-family: "Roboto", sans-serif;   
@@ -10,9 +12,16 @@ h1, h2, h3, h5, p, li, .form-label {
 }
 .buttonorange {
     background-color: #f0ab16;
+    
 }
 .imgcompetence {
-    background-image: url(images/shadows.png);
+    background-image: var(--background-image2);
+}
+.imgexperience {
+    background-image: var(--background-image);
+}
+.sectiontitle {
+    margin-top: 40px;
 }
 .nameanim span {
     display: inline-block;
@@ -22,14 +31,6 @@ h1, h2, h3, h5, p, li, .form-label {
 }
 .buttonorange:hover {
     background-color: #c28108;
-}
-li a {
-    text-decoration: none;
-    color: black;
-    font-family: "Roboto", sans-serif;
-}
-li a:hover {
-    color: #f0ab16;
 }
 .hamburger {
     background-color: none;
@@ -98,6 +99,7 @@ li a:hover {
     margin: auto;
     padding: 20px;
     background-color: white;
+    background-color: var(--background-color-centered-form);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -144,7 +146,8 @@ li a:hover {
   }
 
 .contactbox {
-    background-color: white;
+    background-color: var(--background-color-contactbox);
+    color: var(--text-color-contactbox);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -153,8 +156,12 @@ li a:hover {
     max-width: 250px;
     
 }
+.contactbox p {
+    color: var(--text-color-contactbox);
+}
 .rounded-box {
-    background-color: white;
+    background-color: var(--background-color-rounded-box);
+    color: var(--text-color-rounded-box);
     border-radius: 15px;
     padding: 20px;
     margin-bottom: 20px;
@@ -164,6 +171,9 @@ li a:hover {
     max-width: 100%;
     position: relative;
     overflow: hidden;
+}
+.rounded-box p {
+    color: var(--text-color-rounded-box);
 }
 .particles-js {
     position: absolute;
@@ -193,15 +203,110 @@ li a:hover {
 .containercards {
     padding-top: 30px;
 }
+.form-control {
+    background-color: var(--background-color-input);
+    color: var(--text-color-input);
+    border-color: var(--border-color-input);
+}
 
-.titlelist {
-    background-color: #f0ab16;
+.form-control:focus {
+    background-color: var(--background-color-input);
+    color: var(--text-color-input);
+    border-color: var(--border-color-input);
+    box-shadow: none;
+}
+.form-control::placeholder {
+    color: var(--placeholder-color);
+    opacity: 1;
+}
+.card {
+    background-color: var(--background-color-card);
+    color: var(--text-color-card);
+}
+.card p {
+    color: var(--text-color-card);
+}
+.list-group-item {
+    background-color: var(--list-item-background-color);
+    color: var(--list-item-text-color);
+}
+.list-group-item.titlelist {
+    background-color: var(--list-item-title-background-color);
+    color: var(--list-item-title-text-color);
+}
+.content-section {
+    color: var(--text-color-light);
+}
+.orangeaccent {
+    color: var(--text-color-orange);
+}
+.offcanvaslist a {
+    color: var(--menu-link-color);
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+.offcanvaslist a:hover {
+    color: var(--menu-link-hover-color);
+}
+.sectiontitle {
+    color: var(--h3-color);
 }
 .shadow {
     border-radius: 15px;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.7);;
 }
+:root {
+    --background-color-body: #f1f1da;
+    --background-color-centered-form: white;
+    --background-color-input: white;
+    --text-color-input: black;
+    --placeholder-color: #000000;
+    --background-color-contactbox: white;
+    --text-color-contactbox: black;
+    --background-color-rounded-box: white;
+    --text-color-rounded-box: black;
+    --background-color-card: white;
+    --text-color-card: black;
+    --background-image: url(images/shadows2.png);
+    --background-image2: url(images/shadows.png);
+    --text-color-light: #000;
+    --text-color-dark: #fff;
+    --text-color-orange: #f0ab16;
+    --card-text-color-light: #000;
+    --card-background-color-light: #fff;
+    --list-item-background-color: #ffffff;
+    --list-item-text-color: #000000;
+    --list-item-title-background-color: #f0ab16;
+    --list-item-title-text-color: black;
+    --menu-link-color: #000000;
+    --menu-link-hover-color: #f0ab16;
+    --h3-color: #000000;
+}
+.dark-mode {
+    --background-color-body: rgb(49, 49, 49);
+    --background-color-centered-form: rgb(37, 37, 37);
+    --text-color-input:white;
+    --background-color-input: rgb(19, 19, 19);
+    --placeholder-color: white;
+    --background-color-contactbox: rgb(37, 37, 37);
+    --text-color-contactbox: white;
+    --background-color-rounded-box: rgb(37, 37, 37);
+    --text-color-rounded-box: white;
+    --background-color-card: rgb(37, 37, 37);
+    --text-color-card: white;
+    --background-image: none;
+    --background-image2: none;
+    --text-color-light: #fff;
+    --text-color-dark: #000;
+    --list-item-background-color: rgb(37, 37, 37);
+    --list-item-text-color: #ffffff;
+    --list-item-title-background-color: #f0ab16;
+    --list-item-title-text-color: black;
+    --menu-link-color: #ffffff;
+    --menu-link-hover-color: #f0ab16; 
+    --h3-color: #ffffff;
 
+}
 @media only screen and (max-width:932px ) {
     .helloimg {
         width: 350px;
@@ -214,6 +319,9 @@ li a:hover {
     }
     
     .imgcompetence {
+        background-image: none;
+    }
+    .imgexperience {
         background-image: none;
     }
     
