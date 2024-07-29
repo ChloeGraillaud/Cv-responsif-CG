@@ -1,0 +1,220 @@
+body, .offcanvas-header, .offcanvas-body, .offcanvaslist {
+    background-color: #f1f1da;
+}
+h1, h2, h3, h5, p, li, .form-label {
+    font-family: "Roboto", sans-serif;   
+}
+
+.orangeaccent, .offcanvas-title {
+    color:#f0ab16
+}
+.buttonorange {
+    background-color: #f0ab16;
+}
+.imgcompetence {
+    background-image: url(images/shadows.png);
+}
+.nameanim span {
+    display: inline-block;
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 0.3s;
+}
+.buttonorange:hover {
+    background-color: #c28108;
+}
+li a {
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto", sans-serif;
+}
+li a:hover {
+    color: #f0ab16;
+}
+.hamburger {
+    background-color: none;
+    width:50px;
+    height: auto;
+    margin: 10px;
+}
+.content-section {
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1500px;
+    padding: 0 15px;
+}
+
+.helloimg {
+    height: auto;
+    width: 500px;
+}
+
+.image-container {
+    position: relative;
+    width: 1000px;
+    height: 500px; 
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-content img {
+    border:none;
+    padding:15px
+}
+.social {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+}
+.darkmode-icon {
+    margin-left: 20px;
+    
+}
+.darkmode-icon button {
+    border: none;
+    background: none;
+    padding: 0;
+}
+.darkmode-icon img {
+    display: block;
+    border: none;
+    background: none;
+}
+.centered-form {
+    width: 60%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.contact-info-wrapper {
+    width: 60%;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+}
+.contact-info div {
+    text-align: center;
+}
+.infoimg {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    transition: transform 0.3s ease;
+}
+@keyframes shake {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-2deg); }
+    20% { transform: translate(-6px, 0px) rotate(2deg); }
+    30% { transform: translate(6px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(2deg); }
+    50% { transform: translate(-2px, 3px) rotate(-2deg); }
+    60% { transform: translate(-6px, 2px) rotate(0deg); }
+    70% { transform: translate(6px, 2px) rotate(-2deg); }
+    80% { transform: translate(-2px, -2px) rotate(2deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    100% { transform: translate(2px, -3px) rotate(-2deg); }
+}
+  
+  .infoimg:hover {
+    animation: shake 1.5s;
+    animation-iteration-count: infinite;
+    transform: scale(1.1);
+  }
+
+.contactbox {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+    
+}
+.rounded-box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.pathimg {
+    background-image: url(images/chemin.svg);
+    background-repeat: no-repeat;
+}
+.large-card {
+    width: 18rem;
+    margin: 0 auto;
+}
+
+.small-card {
+    width: 14rem;
+    margin: 0 auto;
+}
+.topcards {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.containercards {
+    padding-top: 30px;
+}
+
+.titlelist {
+    background-color: #f0ab16;
+}
+.shadow {
+    border-radius: 15px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.7);;
+}
+
+@media only screen and (max-width:932px ) {
+    .helloimg {
+        width: 350px;
+        height: auto;
+    }
+    .image-container {
+        width:500px;
+        height: 512px;
+        margin-bottom: 20px;
+    }
+    
+    .imgcompetence {
+        background-image: none;
+    }
+    
+}
