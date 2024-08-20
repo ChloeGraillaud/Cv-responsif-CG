@@ -15,9 +15,14 @@
 </head>
 <body>
     <header>
-          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        <div class="headercontent">
+        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
             <img src="images/hamburger.svg" class="hamburger">
-          </button>
+        </button>
+        <div class="darkmode-icon">
+            <button id="dark-mode-toggle"><img src="images/moon.png" width="50" height="auto"></button>
+        </div>
+    </div>
           
           <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
@@ -163,8 +168,8 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-center">
                 
                 <div class="col mb-4">
-                    <div class="card small-card">
-                        <img src="images/mastermind.png" class="card-img-top" alt="Mastermind">
+                    <div class="card h-100">
+                        <img src="images/mastermind.png" class="card-img-top img-fluid fixed-size" alt="Mastermind">
                         <div class="card-body text-center">
                             <p class="card-text">Jeu du Mastermind codé en Python</p>
                             <a target="_blank" href="https://github.com/ChloeGraillaud/Mastermind-in-Python" class="btn buttonorange">Github</a>
@@ -173,8 +178,8 @@
                 </div>
                
                 <div class="col mb-4">
-                    <div class="card small-card">
-                        <img src="images/quizzworld.png" class="card-img-top" alt="Quizz World">
+                    <div class="card h-100">
+                        <img src="images/quizzworld.png" class="card-img-top img-fluid fixed-size" alt="Quizz World">
                         <div class="card-body text-center">
                             <p class="card-text">Utiliser Javascript et Json pour faire fonctionner un Quiz</p>
                             <a target="_blank" href="https://github.com/ChloeGraillaud/Quizz-World" class="btn buttonorange">Github</a>
@@ -183,8 +188,8 @@
                 </div>
                 
                 <div class="col mb-4">
-                    <div class="card small-card">
-                        <img src="images/ACDC.png" class="card-img-top" alt="ACDC">
+                    <div class="card h-100">
+                        <img src="images/ACDC.png" class="card-img-top img-fluid fixed-size" alt="ACDC">
                         <div class="card-body text-center">
                             <p class="card-text">Exercice créer un site monopage en suivant une maquette</p>
                             <a target="_blank" href="https://github.com/ChloeGraillaud/Webpage-ACDC" class="btn buttonorange">Github</a>
@@ -193,8 +198,8 @@
                 </div>
                 
                 <div class="col mb-4">
-                    <div class="card small-card">
-                        <img src="images/dwwm.png" class="card-img-top" alt="DWWM">
+                    <div class="card h-100">
+                        <img src="images/dwwm.png" class="card-img-top img-fluid fixed-size" alt="DWWM">
                         <div class="card-body text-center">
                             <p class="card-text">Exercice créer un site basé sur la formation en suivant une maquette</p>
                             <a target="_blank" href="https://github.com/ChloeGraillaud/Site-DWWM" class="btn buttonorange">Github</a>
@@ -203,8 +208,8 @@
                 </div>
                 
                 <div class="col mb-4">
-                    <div class="card small-card">
-                        <img src="images/artistes.png" class="card-img-top" alt="Artistes">
+                    <div class="card h-100">
+                        <img src="images/artistes.png" class="card-img-top img-fluid fixed-size" alt="Artistes">
                         <div class="card-body text-center">
                             <p class="card-text">Utiliser CSS et Javascript pour créer des animations</p>
                             <a target="_blank" href="https://github.com/ChloeGraillaud/Les-Artistes-Peintres" class="btn buttonorange">Github</a>
@@ -213,8 +218,8 @@
                 </div>
             
                 <div class="col mb-4">
-                    <div class="card small-card">
-                        <img src="images/historygames.png" class="card-img-top" alt="History of Games">
+                    <div class="card h-100">
+                        <img src="images/historygames.png" class="card-img-top img-fluid fixed-size" alt="History of Games">
                         <div class="card-body text-center">
                             <p class="card-text">Exercice pour utiliser Bootstrap</p>
                             <a target="_blank" href="https://github.com/ChloeGraillaud/History-of-Games" class="btn buttonorange">Github</a>
@@ -328,13 +333,15 @@
                 <label for="exampleFormControlTextarea1" class="form-label orangeaccent fw-bold">Message</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Bonjour ..."></textarea>
             </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn buttonorange btn-lg px-5">Envoyer</button>
+            </div>
         </div>
+        
     </section>
+    
     <footer>
         <div class="footer-content">
-            <div class="darkmode-icon">
-                <button id="dark-mode-toggle"><img src="images/moon.png" width="75" height="auto"></button>
-            </div>
             <div class="social">
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/ChloeGraillaud?tab=repositories"><img src="images/github.svg"  width="110" height="100"></a>
             </div>

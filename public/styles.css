@@ -70,6 +70,11 @@ h1, h2, h3, h5, p, li, .form-label {
     justify-content: space-between;
     align-items: center;
 }
+.headercontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .footer-content img {
     border:none;
     padding:15px
@@ -80,8 +85,7 @@ h1, h2, h3, h5, p, li, .form-label {
     margin-right: 25px;
 }
 .darkmode-icon {
-    margin-left: 20px;
-    
+    margin: 20px;   
 }
 .darkmode-icon button {
     border: none;
