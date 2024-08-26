@@ -243,3 +243,44 @@
         }
         updateButtonIcon();
     });
+
+    //Email js pour envoyer les mails 
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contact-form');
+        const confirmationMessage = document.getElementById('confirmation-message');
+        const sendingMessage = document.getElementById('sending-message');
+        
+        emailjs.init("Xr1CR-irF8-QLAcTO");
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            console.log('Form submitted');
+            
+            // Masquer le formulaire et afficher le message "Envoi en cours..."
+            form.style.display = 'none';
+            sendingMessage.style.display = 'block';
+            
+            emailjs.sendForm('service_a9jm7uh', 'template_ru317cl', this)
+                .then(function() {
+                    console.log('Email sent successfully');
+                    
+                    // Masquer le message "Envoi en cours..." et afficher le message de confirmation
+                    sendingMessage.style.display = 'none';
+                    confirmationMessage.style.display = 'block';
+                }, function(error) {
+                    console.log('Error sending email', error);
+                    
+                    // Masquer le message "Envoi en cours...", réafficher le formulaire et afficher une alerte d'erreur
+                    sendingMessage.style.display = 'none';
+                    form.style.display = 'block';
+                    alert('Erreur lors de l\'envoi du message : ' + JSON.stringify(error));
+                });
+        });
+    });
+    
+    
+    
+    
+    

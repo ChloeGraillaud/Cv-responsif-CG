@@ -38,6 +38,14 @@ h1, h2, h3, h5, p, li, .form-label {
     height: auto;
     margin: 10px;
 }
+#confirmation-message {
+    display: none;
+    color: var(--contact-color-text);
+}
+#sending-message {
+    display: none;
+    color: var(--contact-color-text);
+}
 .content-section {
     margin-top: 80px;
     margin-left: auto;
@@ -50,7 +58,6 @@ h1, h2, h3, h5, p, li, .form-label {
     height: auto;
     width: 500px;
 }
-
 .image-container {
     position: relative;
     width: 1000px;
@@ -92,6 +99,7 @@ h1, h2, h3, h5, p, li, .form-label {
     background: none;
     padding: 0;
 }
+
 .darkmode-icon img {
     display: block;
     border: none;
@@ -115,6 +123,7 @@ h1, h2, h3, h5, p, li, .form-label {
     padding: 20px;
     text-align: center;
 }
+
 .contact-info {
     display: flex;
     justify-content: space-between;
@@ -285,6 +294,7 @@ h1, h2, h3, h5, p, li, .form-label {
     --menu-link-color: #000000;
     --menu-link-hover-color: #f0ab16;
     --h3-color: #000000;
+    --contact-color-text : black;
 }
 .dark-mode {
     --background-color-body: rgb(49, 49, 49);
@@ -309,6 +319,7 @@ h1, h2, h3, h5, p, li, .form-label {
     --menu-link-color: #ffffff;
     --menu-link-hover-color: #f0ab16; 
     --h3-color: #ffffff;
+    --contact-color-text: white;
 
 }
 @media only screen and (max-width:932px ) {
