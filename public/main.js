@@ -193,19 +193,6 @@
             });
         });
     });
-
-    //Nom animé
-    const textSpans = document.querySelectorAll('.nameanim span');
-
-    textSpans.forEach(span => {
-      span.addEventListener('mouseenter', () => {
-        gsap.to(span, { y: -20, duration: 0.3 });
-      });
-
-      span.addEventListener('mouseleave', () => {
-        gsap.to(span, { y: 0, duration: 0.3 });
-      });
-    });
       
     //Dark mode
 
@@ -244,6 +231,120 @@
         updateButtonIcon();
     });
 
+    
+    //Français/Anglais toggle
+
+let currentLanguage = 'fr';
+
+
+function loadTranslations(lang) {
+  fetch('translations.json')
+    .then(response => response.json())
+    .then(data => {
+
+      //Menu et Intro
+      document.getElementById('offcanvasExampleLabel').textContent = data[lang].menu;
+      document.getElementById('menuAccueil').textContent = data[lang].accueil;
+      document.getElementById('menuCompetences').textContent = data[lang].competences;
+      document.getElementById('menuExperiences').textContent = data[lang].experiences;
+      document.getElementById('menuPortfolio').textContent = data[lang].portfolio;
+      document.getElementById('menuFormation').textContent = data[lang].formation;
+      document.getElementById('menuContact').textContent = data[lang].contact;
+      document.getElementById('introText').innerHTML = data[lang].introText;
+      document.getElementById('aboutTitle').innerHTML = data[lang].aboutTitle;
+      document.getElementById('aboutText').innerHTML = data[lang].aboutText;
+      document.getElementById('Iam').innerHTML = data[lang].Iam;
+      document.getElementById('greeting').innerHTML = data[lang].greeting;
+
+      // Mes Compétences
+      document.getElementById('titleCompetence').innerHTML = data[lang].titleCompetence;
+      document.getElementById('techniques').innerHTML = data[lang].techniques;
+      document.getElementById('langues').innerHTML = data[lang].langues;
+      document.getElementById('softSkill1').innerHTML = data[lang].softSkill1;
+      document.getElementById('softSkill2').innerHTML = data[lang].softSkill2;
+      document.getElementById('softSkill3').innerHTML = data[lang].softSkill3;
+      document.getElementById('langue1').innerHTML = data[lang].langue1;
+      document.getElementById('langue2').innerHTML = data[lang].langue2;
+
+      //Mes Expériences
+      document.getElementById('titleExperience').innerHTML = data[lang].titleExperience;
+      document.getElementById('immersion').innerHTML = data[lang].immersion;
+      document.getElementById('session').innerHTML = data[lang].session;
+      document.getElementById('stage').innerHTML = data[lang].stage;
+      document.getElementById('immersion1').innerHTML = data[lang].immersion1;
+      document.getElementById('immersion2').innerHTML = data[lang].immersion2;
+      document.getElementById('immersion3').innerHTML = data[lang].immersion3;
+      document.getElementById('session1').innerHTML = data[lang].session1;
+      document.getElementById('session2').innerHTML = data[lang].session2;
+      document.getElementById('stage1').innerHTML = data[lang].stage1;
+      document.getElementById('stage2').innerHTML = data[lang].stage2;
+      document.getElementById('stage3').innerHTML = data[lang].stage3;
+
+      //Mon Portfolio
+      document.getElementById('titlePortfolio').innerHTML = data[lang].titlePortfolio;
+      document.getElementById('card1').innerHTML = data[lang].card1;
+      document.getElementById('card2').innerHTML = data[lang].card2;
+      document.getElementById('titlePortfolio2').innerHTML = data[lang].titlePortfolio2;
+      document.getElementById('card3').innerHTML = data[lang].card3;
+      document.getElementById('card4').innerHTML = data[lang].card4;
+      document.getElementById('card5').innerHTML = data[lang].card5;
+      document.getElementById('card6').innerHTML = data[lang].card6;
+      document.getElementById('card7').innerHTML = data[lang].card7;
+      document.getElementById('card8').innerHTML = data[lang].card8;
+
+      //Ma Formation
+      document.getElementById('titleFormation').innerHTML = data[lang].titleFormation;
+      document.getElementById('formation1').innerHTML = data[lang].formation1;
+      document.getElementById('formation2').innerHTML = data[lang].formation2;
+      document.getElementById('formation3').innerHTML = data[lang].formation3;
+      document.getElementById('formation4').innerHTML = data[lang].formation4;
+
+      //Contact
+      document.getElementById('titleContact').innerHTML = data[lang].titleContact;
+      document.getElementById('contact1').innerHTML = data[lang].contact1;
+      document.getElementById('contact2').innerHTML = data[lang].contact2;
+      document.getElementById('contact3').innerHTML = data[lang].contact3;
+      document.getElementById('contact4').innerHTML = data[lang].contact4;
+      document.getElementById('contactButton').innerHTML = data[lang].contactButton;
+
+      document.getElementById('contact5').innerHTML = data[lang].contact5;
+      document.getElementById('contact6').innerHTML = data[lang].contact6;
+
+
+      
+      
+
+      
+
+    })
+    .catch(error => console.error('Erreur lors du chargement des traductions:', error));
+}
+
+
+
+function updateIcon(lang) {
+  const langIcon = document.getElementById('langIcon');
+  
+  if (lang === 'fr') {
+    langIcon.src = "images/français.jpg";
+    langIcon.alt = "Langue actuelle: Français";
+  } else {
+    langIcon.src = "images/anglais.jpg";
+    langIcon.alt = "Current language: English";
+  }
+}
+
+document.getElementById("toggleButton").addEventListener("click", function() {
+
+  currentLanguage = (currentLanguage === 'fr') ? 'en' : 'fr';
+  loadTranslations(currentLanguage);
+  updateIcon(currentLanguage);
+});
+
+loadTranslations(currentLanguage);
+updateIcon(currentLanguage);
+
+
     //Email js pour envoyer les mails 
 
     document.addEventListener('DOMContentLoaded', function() {
@@ -258,7 +359,7 @@
             
             console.log('Form submitted');
             
-            // Masquer le formulaire et afficher le message "Envoi en cours..."
+            
             form.style.display = 'none';
             sendingMessage.style.display = 'block';
             
@@ -266,13 +367,13 @@
                 .then(function() {
                     console.log('Email sent successfully');
                     
-                    // Masquer le message "Envoi en cours..." et afficher le message de confirmation
+                    
                     sendingMessage.style.display = 'none';
                     confirmationMessage.style.display = 'block';
                 }, function(error) {
                     console.log('Error sending email', error);
                     
-                    // Masquer le message "Envoi en cours...", réafficher le formulaire et afficher une alerte d'erreur
+                    
                     sendingMessage.style.display = 'none';
                     form.style.display = 'block';
                     alert('Erreur lors de l\'envoi du message : ' + JSON.stringify(error));

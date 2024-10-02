@@ -6,7 +6,9 @@ body, .offcanvas-header, .offcanvas-body, .offcanvaslist {
 h1, h2, h3, h5, p, li, .form-label {
     font-family: "Roboto", sans-serif;   
 }
-
+.hidden {
+    display: none;
+}
 .orangeaccent, .offcanvas-title {
     color:#f0ab16
 }
@@ -82,6 +84,11 @@ h1, h2, h3, h5, p, li, .form-label {
     justify-content: space-between;
     align-items: center;
 }
+.right-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .footer-content img {
     border:none;
     padding:15px
@@ -101,6 +108,11 @@ h1, h2, h3, h5, p, li, .form-label {
 }
 
 .darkmode-icon img {
+    display: block;
+    border: none;
+    background: none;
+}
+.btn-lang img, .btn-lang button {
     display: block;
     border: none;
     background: none;
