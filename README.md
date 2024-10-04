@@ -8,3 +8,4 @@ Contient ;
 - Mon Portfolio
 - Ma formation
 - Un formulaire de contact
+Le site possède un mode sombre, un toggle Anglais/Français et un lien pour le github.
