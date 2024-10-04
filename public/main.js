@@ -291,6 +291,7 @@ function loadTranslations(lang) {
       document.getElementById('card6').innerHTML = data[lang].card6;
       document.getElementById('card7').innerHTML = data[lang].card7;
       document.getElementById('card8').innerHTML = data[lang].card8;
+      document.getElementById('card9').innerHTML = data[lang].card9;
 
       //Ma Formation
       document.getElementById('titleFormation').innerHTML = data[lang].titleFormation;
