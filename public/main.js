@@ -282,8 +282,10 @@ function loadTranslations(lang) {
 
       //Mon Portfolio
       document.getElementById('titlePortfolio').innerHTML = data[lang].titlePortfolio;
-      document.getElementById('card1').innerHTML = data[lang].card1;
-      document.getElementById('card2').innerHTML = data[lang].card2;
+      document.getElementById('maincard1').innerHTML = data[lang].maincard1;
+      document.getElementById('maincard2').innerHTML = data[lang].maincard2;
+      document.getElementById('maincard3').innerHTML = data[lang].maincard3;
+      document.getElementById('maincard4').innerHTML = data[lang].maincard4;
       document.getElementById('titlePortfolio2').innerHTML = data[lang].titlePortfolio2;
       document.getElementById('card3').innerHTML = data[lang].card3;
       document.getElementById('card4').innerHTML = data[lang].card4;
